@@ -38,4 +38,7 @@
 
     <!-- Manufacturer backup settings label -->
     <string name="config_backup_settings_label" translatable="true">@string/backup_transport_setting_label</string>
+
+    <!-- ComponentName to launch a vendor-specific enrollment activity if available -->
+    <string name="config_face_enroll" translatable="false">co.aospa.facesense/co.aospa.facesense.FaceEnrollEnrolling</string>
 </resources>
