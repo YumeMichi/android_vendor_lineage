@@ -4,3 +4,21 @@ prebuilt_etc_xml {
     src: "etc/sensitive_pn.xml",
     schema: ":spn-schema",
 }
+
+prebuilt_font {
+    name: "Inter-VF.ttf",
+    product_specific: true,
+    src: "fonts/Inter-VF.ttf",
+}
+
+prebuilt_font {
+    name: "Manrope-VF.ttf",
+    product_specific: true,
+    src: "fonts/Manrope-VF.ttf",
+}
+
+prebuilt_font {
+    name: "Urbanist-VF.ttf",
+    product_specific: true,
+    src: "fonts/Urbanist-VF.ttf",
+}

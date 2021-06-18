@@ -9,10 +9,20 @@ $(call inherit-product-if-exists, external/google-fonts/rubik/fonts.mk)
 
 # Fonts
 PRODUCT_PACKAGES += \
-    fonts_customization.xml \
+    Inter-VF.ttf \
+    Manrope-VF.ttf \
+    Urbanist-VF.ttf
+
+PRODUCT_PACKAGES += \
     LineageGoogleSansFont \
+    LineageInterFont \
     LineageLatoFont \
-    LineageRubikFont
+    LineageManropeFont \
+    LineageRubikFont \
+    LineageUrbanistFont
+
+PRODUCT_PACKAGES += \
+    fonts_customization.xml
 
 # Recorder
 PRODUCT_PACKAGES += \
