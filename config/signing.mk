@@ -1,0 +1,5 @@
+PRIVATE_KEY_PATH := certs
+
+ifneq ($(PRIVATE_KEY_PATH),)
+    PRODUCT_DEFAULT_DEV_CERTIFICATE := $(PRIVATE_KEY_PATH)/releasekey
+endif

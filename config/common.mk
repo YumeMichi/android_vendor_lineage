@@ -109,6 +109,9 @@ WITH_GMS := true
 
 endif #TARGET_DISABLES_GMS
 
+# Signing
+$(call inherit-product-if-exists, vendor/lineage/config/signing.mk)
+
 # StitchImage
 PRODUCT_PACKAGES += \
     StitchImage
