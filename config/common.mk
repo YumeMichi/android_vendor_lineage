@@ -73,6 +73,23 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.control_privapp_permissions=enforce
 
+# GMS
+ifneq ($(TARGET_DISABLES_GMS), true)
+
+# Inherit GMS, Pixel Features, and Modules.
+$(call inherit-product, vendor/google/pixel/config.mk)
+$(call inherit-product, vendor/google/gms/config.mk)
+ifeq ($(TARGET_FLATTEN_APEX), false)
+$(call inherit-product-if-exists, vendor/google/modules/build/mainline_modules_r.mk)
+else
+$(call inherit-product-if-exists, vendor/google/modules/build/mainline_modules_r_flatten_apex.mk)
+endif
+
+# Don't preoptimize prebuilts when building GMS.
+DONT_DEXPREOPT_PREBUILTS := true
+
+endif #TARGET_DISABLES_GMS
+
 # Include AOSP audio files
 include vendor/lineage/config/aosp_audio.mk
 
