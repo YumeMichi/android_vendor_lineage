@@ -90,6 +90,10 @@ DONT_DEXPREOPT_PREBUILTS := true
 
 endif #TARGET_DISABLES_GMS
 
+# StitchImage
+PRODUCT_PACKAGES += \
+    StitchImage
+
 # Include AOSP audio files
 include vendor/lineage/config/aosp_audio.mk
 
