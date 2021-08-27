@@ -101,6 +101,8 @@ endif
 # Don't preoptimize prebuilts when building GMS.
 DONT_DEXPREOPT_PREBUILTS := true
 
+WITH_GMS := true
+
 endif #TARGET_DISABLES_GMS
 
 # StitchImage
